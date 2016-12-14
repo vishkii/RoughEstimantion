@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context="com.example.krupal.roughestimantion.MainActivity"
+    android:orientation="vertical">
+    <android.support.design.widget.TextInputLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:paddingBottom="10dp"
+            android:ems="10"
+            android:maxLines="1"
+            android:background="@drawable/edittext"
+            android:id="@+id/rough_editText"
+            android:hint="Rough"
+            android:paddingLeft="15dp"/>
+    </android.support.design.widget.TextInputLayout>
+
+
+
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/clarity_list"
+        android:background="@drawable/edittext"
+        android:paddingBottom="10dp"
+        android:entries="@array/clarity_array"
+        android:layout_marginTop="15dp" >
+
+    </Spinner>
+
+    <android.support.design.widget.TextInputLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:paddingBottom="10dp"
+        android:ems="10"
+        android:maxLines="1"
+        android:background="@drawable/edittext"
+        android:id="@+id/size_editText"
+        android:hint="Size"
+        android:paddingLeft="15dp"/>
+    </android.support.design.widget.TextInputLayout>
+
+
+
+
+
+    <android.support.design.widget.TextInputLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:maxLines="1"
+        android:background="@drawable/edittext"
+        android:id="@+id/florosenceeditText"
+        android:hint="Florosence"
+        android:paddingLeft="15dp"/>
+    </android.support.design.widget.TextInputLayout>
+
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cut_list"
+        android:background="@drawable/edittext"
+        android:layout_marginTop="10dp"
+        android:entries="@array/cut_array">
+
+    </Spinner>
+
+    <android.support.design.widget.TextInputLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:paddingBottom="10dp"
+        android:ems="10"
+        android:maxLines="1"
+        android:background="@drawable/edittext"
+        android:id="@+id/carats_editText"
+        android:hint="Carats"
+        android:text="0"
+        android:paddingLeft="15dp"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:paddingBottom="10dp"
+            android:ems="10"
+            android:maxLines="1"
+            android:background="@drawable/edittext"
+            android:id="@+id/rate_editText"
+            android:hint="Rate"
+            android:text="0"
+            android:paddingLeft="15dp"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:paddingBottom="10dp"
+        android:ems="10"
+        android:maxLines="1"
+        android:background="@drawable/edittext"
+        android:id="@+id/amount_editText"
+        android:hint="Amount"
+        android:paddingLeft="15dp"
+        android:enabled="false"
+        />
+    </android.support.design.widget.TextInputLayout>
+
+    <RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="50dp"
+    >
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:id="@+id/viewrecord_burron"
+        android:text="viewrecord"
+        android:background="@drawable/button"
+        android:textColor="#ffffff"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="invisible"/>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:id="@+id/submit_button"
+        android:text="submit"
+        android:background="@drawable/button"
+        android:textColor="#ffffff"
+
+        android:layout_alignBottom="@+id/viewrecord_burron"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/viewrecord_burron" />
+
+</RelativeLayout>
+</LinearLayout>

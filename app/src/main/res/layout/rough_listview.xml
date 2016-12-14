@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/myList">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:padding="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+
+            android:text="rough"
+            android:ems="10"
+            android:id="@+id/roughlist_Textview"
+            android:layout_above="@+id/amountlist_Textview"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="10dp"
+            android:textSize="20sp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="clarity"
+            android:ems="10"
+            android:id="@+id/roughclarity_Textview"
+            android:layout_below="@+id/roughlist_Textview"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="10dp"
+            android:textSize="20sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Size"
+            android:ems="10"
+            android:id="@+id/sizelist_Textview"
+            android:textSize="20sp"
+            android:layout_above="@+id/florosancelist_Textview"
+            android:layout_alignLeft="@+id/florosancelist_Textview"
+            android:layout_alignStart="@+id/florosancelist_Textview"
+            android:layout_marginBottom="10dp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="florosance"
+            android:ems="10"
+            android:id="@+id/florosancelist_Textview"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="20sp"
+            android:layout_marginBottom="10dp"/>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Cut"
+            android:ems="10"
+            android:id="@+id/cutlist_Textview"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="10dp"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Carat"
+            android:ems="10"
+            android:id="@+id/caratlist_Textview"
+            android:layout_alignBottom="@+id/cutlist_Textview"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="10dp"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Rate"
+            android:ems="10"
+            android:id="@+id/ratelist_Textview"
+            android:layout_above="@+id/caratlist_Textview"
+            android:layout_marginBottom="10dp"
+            android:textSize="20sp"
+            />
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="amount"
+            android:ems="10"
+            android:id="@+id/amountlist_Textview"
+            android:layout_above="@+id/ratelist_Textview"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="10dp"
+            android:textSize="20sp"/>
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
