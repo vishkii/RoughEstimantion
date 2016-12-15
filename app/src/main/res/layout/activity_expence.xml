@@ -49,7 +49,7 @@
                 android:inputType="textPersonName"
                 android:hint="adat(brokerage)"
                 android:ems="10"
-                android:text="0"
+
                 android:background="@drawable/edittext"
                 android:id="@+id/adat_txt" />
         </android.support.design.widget.TextInputLayout>
@@ -67,7 +67,7 @@
                 android:hint="travel expence"
                 android:background="@drawable/edittext"
                 android:ems="10"
-                android:text="0"
+
                 android:id="@+id/travel_txt" />
         </android.support.design.widget.TextInputLayout>
 

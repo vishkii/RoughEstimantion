@@ -20,58 +20,6 @@ import java.util.List;
 
 public class ShowRoughAdapter extends BaseAdapter {
 
-
-
-  /*  public ShowRoughAdapter(Context context, Cursor c) {
-        super(context, c);
-    }
-
-    @Override
-    public View newView(Context context, Cursor cursor, ViewGroup viewGroup) {
-
-       return LayoutInflater.from(context).inflate(R.layout.rough_listview, viewGroup, false);
-
-    }
-
-    @Override
-    public void bindView(View view, Context context, Cursor cursor) {
-
-
-
-        TextView txtName = (TextView) view.findViewById(R.id.roughlist_Textview);
-        TextView txtclarity = (TextView) view.findViewById(R.id.roughclarity_Textview);
-        TextView txtsize = (TextView) view.findViewById(R.id.sizelist_Textview);
-        TextView txtflorosence = (TextView) view.findViewById(R.id.florosancelist_Textview);
-        TextView txtcut = (TextView) view.findViewById(R.id.cutlist_Textview);
-        TextView txtcarat = (TextView) view.findViewById(R.id.caratlist_Textview);
-        TextView txtrate = (TextView) view.findViewById(R.id.ratelist_Textview);
-        TextView txtamount = (TextView) view.findViewById(R.id.amountlist_Textview);
-
-
-        String name = cursor.getString(1);
-        String clarity = cursor.getString(2);
-        String size = cursor.getString(3);
-        String florosence = cursor.getString(4);
-        String cut = cursor.getString(5);
-        String carats = cursor.getString(6);
-        String rate = cursor.getString(7);
-        String amount = cursor.getString(8);
-
-        txtName.setText(name);
-        txtclarity.setText(clarity);
-        txtsize.setText(size);
-        txtflorosence.setText(florosence);
-        txtcut.setText(cut);
-        txtcarat.setText(carats);
-        txtrate.setText(rate);
-        txtamount.setText(amount);
-
-
-    }
-
-
-*/
-
     List<RoughModal> listrough;
     Activity a;
     public ShowRoughAdapter(Activity a, List<RoughModal> listrough){
@@ -100,8 +48,6 @@ public class ShowRoughAdapter extends BaseAdapter {
         if(convertView == null){
             view = new ViewHolder();
             convertView = inflater.inflate(R.layout.rough_listview, null);
-
-
             view.txtName = (TextView) convertView.findViewById(R.id.roughlist_Textview);
             view.txtclarity = (TextView) convertView.findViewById(R.id.roughclarity_Textview);
             view.txtsize = (TextView) convertView.findViewById(R.id.sizelist_Textview);
@@ -124,9 +70,5 @@ public class ShowRoughAdapter extends BaseAdapter {
         view.txtamount.setText("Amount : "+listrough.get(i).getAMOUNT());
         return convertView;
     }
-
-
-
-
 }
 

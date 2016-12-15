@@ -19,7 +19,6 @@ public class ExpenceActivity extends AppCompatActivity {
     String totalexpence = "0";
     String avg_amt;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,19 +33,13 @@ public class ExpenceActivity extends AppCompatActivity {
         Intent intent = getIntent();
         avg_amt = intent.getStringExtra("totalavg");
         avgtotal.setText("total avearage  :   " + avg_amt);
-
-
         adattext.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
             }
-
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
             }
-
             @Override
             public void afterTextChanged(Editable editable) {
                 totalexpence = String.valueOf((Float.parseFloat(avg_amt)* Float.parseFloat(adattext.getText().toString())/100) + (Float.parseFloat(avg_amt)) ) ;
@@ -80,8 +73,8 @@ public class ExpenceActivity extends AppCompatActivity {
                 Log.i("float",String.valueOf(aFloat) );
                 totalexpence = String.valueOf(Float.parseFloat(avg_amt)* aFloat/100 + (Float.parseFloat(avg_amt))) ;
                 finalest.setText(totalexpence);
+
             }
         });
-
     }
 }

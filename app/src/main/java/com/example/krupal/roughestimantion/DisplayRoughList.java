@@ -21,9 +21,7 @@ public class DisplayRoughList extends AppCompatActivity {
     TextView totalamount, totalavg, totalcarats;
     ListView listView;
     ArrayList<RoughModal> r = new ArrayList<RoughModal>();
-    RoughModal rm = new RoughModal();
-    SQLiteDatabase sample = null;
-
+      SQLiteDatabase sample = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,27 +30,14 @@ public class DisplayRoughList extends AppCompatActivity {
         totalavg = (TextView) findViewById(R.id.avg_textView);
         totalcarats = (TextView) findViewById(R.id.carat_textView);
         listView = (ListView) findViewById(R.id.display_listview);
-
-
-//        // TodoDatabaseHandler is a SQLiteOpenHelper class connecting to SQLite
-//        DbHelper handler = new DbHelper(this);
-//// Get access to the underlying writeable database
-//        SQLiteDatabase db = handler.getWritableDatabase();
-//// Query for items from the database and get a cursor back
-//        Cursor todoCursor = db.rawQuery("SELECT  * FROM rough_count", null);
-//
-//
-//        ShowRoughAdapter todoAdapter = new ShowRoughAdapter(this, todoCursor);
-//// Attach cursor adapter to the ListView
-//        listView.setAdapter(todoAdapter);
         try {
             sample = this.openOrCreateDatabase(db_name, MODE_PRIVATE, null);
             cursor = sample.rawQuery("SELECT * FROM rough_count", null);
-
             Log.d("cursor", "query" + cursor);
             if (cursor != null) {
                 if (cursor.moveToFirst())
                     do {
+                        RoughModal rm = new RoughModal();
                         rm.setNAME(cursor.getString(1));
                         rm.setCLARITY(cursor.getString(2));
                         rm.setSIZE(cursor.getString(3));
@@ -65,11 +50,9 @@ public class DisplayRoughList extends AppCompatActivity {
                     } while (cursor.moveToNext());
             }
             Log.e("Database", "Total Records:" + cursor.getCount());
-
             ShowRoughAdapter adapter = new ShowRoughAdapter(this, r);
             listView.setAdapter(adapter);
         } catch (SQLiteException s) {
-
         }
         Intent intent = getIntent();
         String total_carat = intent.getStringExtra("total carat");
@@ -82,5 +65,4 @@ public class DisplayRoughList extends AppCompatActivity {
         Log.i("total_amt", total_amt);
         Log.i("total_avg", avg_amt);
     }
-
 }

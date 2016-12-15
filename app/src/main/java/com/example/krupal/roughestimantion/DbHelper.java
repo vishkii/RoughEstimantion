@@ -2,6 +2,7 @@ package com.example.krupal.roughestimantion;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
@@ -27,28 +28,19 @@ public class DbHelper extends SQLiteOpenHelper
     public static final String COL_9="AMOUNT";
 
 
-
     public DbHelper(Context context) {
-
         super(context, DATABASE_NAME, null, 1);
-
-
     }
-
 
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(" CREATE TABLE IF NOT EXISTS rough_count (ID INTEGER PRIMARY KEY AUTOINCREMENT ,NAME VARCHAR,CLARITY VARCHAR,SIZE VARCHAR,FLOROSENCE VARCHAR,CUT VARCHAR,CARATS VARCHAR,RATE VARCHAR,AMOUNT VARCHAR);");
-
     }
-
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS "+TABLE_NAME);
+         db.execSQL("DROP TABLE IF EXISTS "+TABLE_NAME);
         onCreate(db);
-
     }
-
     public boolean insertData(String rough_name,String rough_clarity,String rough_size,String rough_florosence,String rough_cut,String rough_carats,String rough_rate,String rough_amount){
         SQLiteDatabase db = this.getReadableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -68,5 +60,6 @@ public class DbHelper extends SQLiteOpenHelper
     }
 
 
-}
+
+  }
 

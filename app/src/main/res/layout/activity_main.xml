@@ -47,14 +47,16 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         android:paddingBottom="10dp"
         android:ems="10"
         android:maxLines="1"
         android:background="@drawable/edittext"
         android:id="@+id/size_editText"
         android:hint="Size"
-        android:paddingLeft="15dp"/>
+        android:paddingLeft="15dp"
+
+        />
     </android.support.design.widget.TextInputLayout>
 
 
@@ -97,18 +99,18 @@
         >
 
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:paddingBottom="10dp"
-        android:ems="10"
-        android:maxLines="1"
-        android:background="@drawable/edittext"
-        android:id="@+id/carats_editText"
-        android:hint="Carats"
-        android:text="0"
-        android:paddingLeft="15dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:paddingBottom="10dp"
+            android:ems="10"
+            android:maxLines="1"
+            android:background="@drawable/edittext"
+            android:id="@+id/carats_editText"
+            android:hint="Carats"
+
+            android:paddingLeft="15dp"/>
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -120,14 +122,14 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
+            android:inputType="numberDecimal"
             android:paddingBottom="10dp"
             android:ems="10"
             android:maxLines="1"
             android:background="@drawable/edittext"
             android:id="@+id/rate_editText"
             android:hint="Rate"
-            android:text="0"
+
             android:paddingLeft="15dp"
             />
     </android.support.design.widget.TextInputLayout>
@@ -141,7 +143,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         android:paddingBottom="10dp"
         android:ems="10"
         android:maxLines="1"
@@ -159,29 +161,44 @@
     >
 
     <Button
-        android:layout_width="150dp"
-        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/viewrecord_burron"
         android:text="viewrecord"
         android:background="@drawable/button"
         android:textColor="#ffffff"
+        android:visibility="invisible"
         android:layout_centerVertical="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:visibility="invisible"/>
+        />
 
     <Button
-        android:layout_width="150dp"
-        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/submit_button"
         android:text="submit"
         android:background="@drawable/button"
         android:textColor="#ffffff"
-
         android:layout_alignBottom="@+id/viewrecord_burron"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignTop="@+id/viewrecord_burron" />
 
-</RelativeLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/delete"
+            android:text="delete"
+            android:background="@drawable/button"
+            android:textColor="#ffffff"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/submit_button"
+            android:layout_toEndOf="@+id/submit_button"
+            android:layout_marginLeft="21dp"
+            android:layout_marginStart="21dp"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
 </LinearLayout>
