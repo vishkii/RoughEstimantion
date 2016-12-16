@@ -112,6 +112,12 @@
             android:textSize="20dp"
             android:background="@drawable/edittext"/>
 
+        <Button
+            android:text="submittotalavg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button" />
+
 
     </LinearLayout>
 

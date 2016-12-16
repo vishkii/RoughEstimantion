@@ -13,7 +13,7 @@
 
     <ListView
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="300dp"
         android:id="@+id/display_listview"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -29,15 +29,6 @@
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="11dp" />
 
-    <TextView
-        android:text="amounttotal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/amount_textView"
-        android:layout_above="@+id/carat_textView"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="16dp" />
 
     <TextView
         android:text="TOTALAMOUNT"
@@ -75,6 +66,35 @@
         android:layout_alignBottom="@+id/carat_textView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="FINALAVERAGE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:layout_above="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="21dp" />
+
+    <TextView
+        android:text="amounttotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/amount_textView"
+        android:layout_marginBottom="17dp"
+        android:layout_above="@+id/carat_textView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="finalaverage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/finalavg_textview"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 
 </RelativeLayout>

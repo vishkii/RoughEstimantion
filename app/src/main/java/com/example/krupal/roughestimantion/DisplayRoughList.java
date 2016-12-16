@@ -7,21 +7,21 @@ import android.database.sqlite.SQLiteException;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class DisplayRoughList extends AppCompatActivity {
 
+    private ArrayList<String> m_parts = new ArrayList<>();
 
-    private Cursor cursor;
-    private final String db_name = "rough.db";
-    private final String table_name = "rough_count";
-    TextView totalamount, totalavg, totalcarats;
+    TextView totalamount, totalavg, totalcarats,finalavg;
     ListView listView;
-    ArrayList<RoughModal> r = new ArrayList<RoughModal>();
-      SQLiteDatabase sample = null;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,39 +30,31 @@ public class DisplayRoughList extends AppCompatActivity {
         totalavg = (TextView) findViewById(R.id.avg_textView);
         totalcarats = (TextView) findViewById(R.id.carat_textView);
         listView = (ListView) findViewById(R.id.display_listview);
-        try {
-            sample = this.openOrCreateDatabase(db_name, MODE_PRIVATE, null);
-            cursor = sample.rawQuery("SELECT * FROM rough_count", null);
-            Log.d("cursor", "query" + cursor);
-            if (cursor != null) {
-                if (cursor.moveToFirst())
-                    do {
-                        RoughModal rm = new RoughModal();
-                        rm.setNAME(cursor.getString(1));
-                        rm.setCLARITY(cursor.getString(2));
-                        rm.setSIZE(cursor.getString(3));
-                        rm.setFLOROSENCE(cursor.getString(4));
-                        rm.setCUT(cursor.getString(5));
-                        rm.setCARATS(cursor.getString(6));
-                        rm.setRATE(cursor.getString(7));
-                        rm.setAMOUNT(cursor.getString(8));
-                        r.add(rm);
-                    } while (cursor.moveToNext());
-            }
-            Log.e("Database", "Total Records:" + cursor.getCount());
-            ShowRoughAdapter adapter = new ShowRoughAdapter(this, r);
-            listView.setAdapter(adapter);
-        } catch (SQLiteException s) {
-        }
+        finalavg = (TextView)findViewById(R.id.finalavg_textview);
+
+
+
+        //ArrayList ar1=getIntent().getExtras().getStringArrayList("arrayList");
+        ShowRoughAdapter arrayAdapter =
+                new ShowRoughAdapter(this,R.layout.rough_listview, m_parts);
+        listView.setAdapter(arrayAdapter);
+
         Intent intent = getIntent();
-        String total_carat = intent.getStringExtra("total carat");
         String total_amt = intent.getStringExtra("total amount");
-        String avg_amt = intent.getStringExtra("avearage");
+        String total_carat = intent.getStringExtra("total carat");
+        String avg_amt = intent.getStringExtra("totalavg");
+
+
         totalamount.setText(total_amt);
         totalcarats.setText(total_carat);
         totalavg.setText(avg_amt);
-        Log.d("total_carat", total_carat);
-        Log.i("total_amt", total_amt);
-        Log.i("total_avg", avg_amt);
+
+
+        Intent intent1 = getIntent();
+        String avg1 = intent1.getStringExtra("avegrage");
+        finalavg.setText(avg1);
+
+
+
     }
 }
